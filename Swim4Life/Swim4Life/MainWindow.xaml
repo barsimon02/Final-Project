@@ -1,0 +1,32 @@
+﻿<Window x:Class="Swim4Life.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Swim4Life"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid Background="#FF9EE1FF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Employees" HorizontalAlignment="Left" Margin="120,100,0,0" VerticalAlignment="Top" Width="99" Height="51" Click="Employee_Click" Background="#FF4DB5FF"/>
+        <Button Content="Expense" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="120,156,0,0" Height="52" Click="Expense_Click_1" Background="#FF9EE1FF"/>
+        <Button Content="Pool" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="120,213,0,0" Height="56" Background="#FFA5DDFF" Click="pool_Click_3"/>
+        <Button Content="Schedule" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="601,100,0,0" Height="56" Background="#FF4DB5FF" Click="schedule"/>
+        <Button Content="Student" HorizontalAlignment="Left" VerticalAlignment="Top" Width="101" Margin="601,165,0,0" Height="54" Background="#FF9EE1FF" RenderTransformOrigin="1.204,-0.989" Click="student_Click"/>
+        <Button Content="Teams" HorizontalAlignment="Left" VerticalAlignment="Top" Width="101" Margin="601,223,0,0" Height="51" RenderTransformOrigin="0.372,0.84" Background="#FFA5DDFF" Click="Team_Click"/>
+        <Button Content="Workshops" HorizontalAlignment="Left" VerticalAlignment="Top" Width="101" Margin="601,279,0,0" Height="51" Background="#FF9BB5FF" Click="WorkShop_Click"/>
+        <Button Content="Product" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="120,274,0,0" Height="56" Click="Product_Click_2" Background="#FF9BB5FF"/>
+        <Label Content="SWIM4LIFE" HorizontalAlignment="Left" Margin="304,24,0,0" VerticalAlignment="Top" Width="205" FontSize="36" FontWeight="Bold" Foreground="#FFDF8932">
+            <Label.Background>
+                <ImageBrush/>
+            </Label.Background>
+        </Label>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="230" Margin="267,100,0,0" VerticalAlignment="Top" Width="296">
+            <Border.Background>
+                <ImageBrush ImageSource="NewFolder1/573583d1-68cc-490a-ab89-e9f754197376.jpg"/>
+            </Border.Background>
+        </Border>
+    </Grid>
+</Window>

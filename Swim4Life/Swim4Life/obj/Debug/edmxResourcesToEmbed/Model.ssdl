@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Employees_Tbl">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmpPhone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmpAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmpMail" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmpFunction" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Expense_Tbl">
+    <Key>
+      <PropertyRef Name="ExpenseId" />
+    </Key>
+    <Property Name="ExpenseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExpenseDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExpenseProductId" Type="int" Nullable="false" />
+    <Property Name="ExpenseAmount" Type="int" Nullable="false" />
+    <Property Name="ExpenseSum" Type="int" Nullable="false" />
+    <Property Name="ExpenseProductName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Pool_Tbl">
+    <Key>
+      <PropertyRef Name="PoolId" />
+    </Key>
+    <Property Name="PoolId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PoolName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PoolCity" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product_tbl">
+    <Key>
+      <PropertyRef Name="ProdId" />
+    </Key>
+    <Property Name="ProdId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProdName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProdPrice" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Schedule_Tbl">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="ScheduleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SchedulePoolId" Type="int" Nullable="false" />
+    <Property Name="ScheduleTeamId" Type="int" Nullable="false" />
+    <Property Name="ScheduleDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Team" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pool" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Students_Tbl">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="StudentPhone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="StudentAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="StudentMail" Type="nvarchar" MaxLength="50" />
+    <Property Name="StudentAge" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teams_Tbl">
+    <Key>
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="TeamId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TeamLevel" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TeamStartDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="TeamName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TeamEmployee" Type="int" />
+    <Property Name="TeamEmployeeName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="WorkShop_Tbl">
+    <Key>
+      <PropertyRef Name="WorkShopId" />
+    </Key>
+    <Property Name="WorkShopId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkShopName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="WorkShopDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="WorkShopEmployee" Type="int" Nullable="false" />
+    <Property Name="WorkShopEmployeeName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Expense_Tbl_Product">
+    <End Role="Product_tbl" Type="Self.Product_tbl" Multiplicity="1" />
+    <End Role="Expense_Tbl" Type="Self.Expense_Tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_tbl">
+        <PropertyRef Name="ProdId" />
+      </Principal>
+      <Dependent Role="Expense_Tbl">
+        <PropertyRef Name="ExpenseProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_ToPool">
+    <End Role="Pool_Tbl" Type="Self.Pool_Tbl" Multiplicity="1" />
+    <End Role="Schedule_Tbl" Type="Self.Schedule_Tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pool_Tbl">
+        <PropertyRef Name="PoolId" />
+      </Principal>
+      <Dependent Role="Schedule_Tbl">
+        <PropertyRef Name="SchedulePoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_ToTeam">
+    <End Role="Teams_Tbl" Type="Self.Teams_Tbl" Multiplicity="1" />
+    <End Role="Schedule_Tbl" Type="Self.Schedule_Tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teams_Tbl">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="Schedule_Tbl">
+        <PropertyRef Name="ScheduleTeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TeamEmp">
+    <End Role="Employees_Tbl" Type="Self.Employees_Tbl" Multiplicity="0..1" />
+    <End Role="Teams_Tbl" Type="Self.Teams_Tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees_Tbl">
+        <PropertyRef Name="EmpId" />
+      </Principal>
+      <Dependent Role="Teams_Tbl">
+        <PropertyRef Name="TeamEmployee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="WorkShopEmp">
+    <End Role="Employees_Tbl" Type="Self.Employees_Tbl" Multiplicity="1" />
+    <End Role="WorkShop_Tbl" Type="Self.WorkShop_Tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees_Tbl">
+        <PropertyRef Name="EmpId" />
+      </Principal>
+      <Dependent Role="WorkShop_Tbl">
+        <PropertyRef Name="WorkShopEmployee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="StoreContainer">
+    <EntitySet Name="Employees_Tbl" EntityType="Self.Employees_Tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Expense_Tbl" EntityType="Self.Expense_Tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pool_Tbl" EntityType="Self.Pool_Tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_tbl" EntityType="Self.Product_tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Schedule_Tbl" EntityType="Self.Schedule_Tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students_Tbl" EntityType="Self.Students_Tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Teams_Tbl" EntityType="Self.Teams_Tbl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkShop_Tbl" EntityType="Self.WorkShop_Tbl" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Expense_Tbl_Product" Association="Self.FK_Expense_Tbl_Product">
+      <End Role="Product_tbl" EntitySet="Product_tbl" />
+      <End Role="Expense_Tbl" EntitySet="Expense_Tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_ToPool" Association="Self.FK_Schedule_ToPool">
+      <End Role="Pool_Tbl" EntitySet="Pool_Tbl" />
+      <End Role="Schedule_Tbl" EntitySet="Schedule_Tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_ToTeam" Association="Self.FK_Schedule_ToTeam">
+      <End Role="Teams_Tbl" EntitySet="Teams_Tbl" />
+      <End Role="Schedule_Tbl" EntitySet="Schedule_Tbl" />
+    </AssociationSet>
+    <AssociationSet Name="TeamEmp" Association="Self.TeamEmp">
+      <End Role="Employees_Tbl" EntitySet="Employees_Tbl" />
+      <End Role="Teams_Tbl" EntitySet="Teams_Tbl" />
+    </AssociationSet>
+    <AssociationSet Name="WorkShopEmp" Association="Self.WorkShopEmp">
+      <End Role="Employees_Tbl" EntitySet="Employees_Tbl" />
+      <End Role="WorkShop_Tbl" EntitySet="WorkShop_Tbl" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

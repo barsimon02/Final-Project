@@ -1,0 +1,30 @@
+﻿<Window x:Class="Swim4Life.Pool"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Swim4Life"
+        mc:Ignorable="d"
+        Title="Pool" Height="472.4" Width="899" Loaded="OnLoad">
+    <Grid Background="#FFA5DDE1">
+        <DataGrid x:Name="pool_tbl" HorizontalAlignment="Left" Height="380" VerticalAlignment="Top" Width="485" Margin="10,52,0,0" Background="White" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding  }" Header=""/>
+                <DataGridTextColumn Binding="{Binding PoolName }" Header="Name"/>
+                <DataGridTextColumn Binding="{Binding PoolCity}" Header="City"/>
+               
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Content="Pool Table" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="4.842,3.006" Margin="167,10,0,0" Height="56" Width="190" Background="{x:Null}" BorderBrush="#FF140101" FontWeight="Bold" FontFamily="Segoe Print" FontSize="18" />
+        <Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="619,372,0,0" Height="60" Background="White" BorderBrush="Black" FontWeight="Bold" FontFamily="Segoe Print" Click="Add_Click"/>
+        <Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="705,372,0,0" Height="60" Background="White" BorderBrush="Black" FontWeight="Bold" FontFamily="Segoe Print" Click="Delete_Click"/>
+        <Button Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="784,372,0,0" Height="60" Background="White" BorderBrush="Black" FontWeight="Bold" FontFamily="Segoe Print" Click="Update_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="City:" VerticalAlignment="Top" Width="81" Margin="619,109,0,0" FontWeight="Bold" FontFamily="Segoe Print" Background="{x:Null}" BorderBrush="#FF140101"/>
+        <TextBox HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="Pool Name:" VerticalAlignment="Top" Width="81" Margin="619,80,0,0" Background="{x:Null}" BorderBrush="#FF140101" FontWeight="Bold" FontFamily="Segoe Print"/>
+        <ComboBox x:Name="CB" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Margin="619,52,0,0" Height="23" SelectionChanged="CB_SelectionChanged"/>
+        <TextBox x:Name="PoolC" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Margin="705,109,0,0" BorderBrush="#FF140101"/>
+        <TextBox x:Name="PoolN" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Margin="705,80,0,0" BorderBrush="#FF140101"/>
+
+    </Grid>
+</Window>

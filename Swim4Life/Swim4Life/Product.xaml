@@ -1,0 +1,31 @@
+﻿<Window x:Class="Swim4Life.Product"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Swim4Life"
+        mc:Ignorable="d"
+        Title="Product" Height="472.4" Width="899" Loaded="OnLoad">
+    <Grid Margin="0,0,-0.2,-51.6" Background="#FFA5DDFF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="prod_tbl" HorizontalAlignment="Left" Height="380" VerticalAlignment="Top" Width="485" Margin="10,55,0,0" Background="White" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding  }" Header=""/>
+                <DataGridTextColumn Binding="{Binding ProdName }" Header="Name"/>
+                <DataGridTextColumn Binding="{Binding ProdPrice}" Header="price"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="617,375,0,0" Height="60" Background="White" FontWeight="Bold" FontFamily="Segoe Print" BorderBrush="#FF120101" Click="Add_Click"/>
+        <Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="703,375,0,0" Height="60" Background="White" FontWeight="Bold" FontFamily="Segoe Print" BorderBrush="#FF120101" RenderTransformOrigin="0.197,0.3" Click="Delete_Click"/>
+        <Button Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="782,375,0,0" Height="60" Background="White" BorderBrush="#FF120101" FontWeight="Bold" FontFamily="Segoe Print" Click="Update_Click"/>
+        <Label Content="Product Table" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="161,12,0,0" Height="38" Width="199" Background="{x:Null}" BorderBrush="#FF140101" FontWeight="Bold" FontFamily="Segoe Print" FontSize="18"/>
+        <TextBox x:Name="ProdP" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap"  VerticalAlignment="Top" Width="139" Margin="703,112,0,0" BorderBrush="#FF120101"/>
+        <TextBox x:Name="ProdN" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap"  VerticalAlignment="Top" Width="139" Margin="703,83,0,0" BorderBrush="#FF120101"/>
+        <TextBox HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top" Width="81" Margin="617,83,0,0" RenderTransformOrigin="4.249,2.575" Background="{x:Null}" BorderBrush="#FF120101" FontWeight="Bold" FontFamily="Segoe Print"/>
+        <TextBox HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="Price:" VerticalAlignment="Top" Width="81" Margin="617,112,0,0" Background="{x:Null}" BorderBrush="#FF120101" FontWeight="Bold" FontFamily="Segoe Print"/>
+        <ComboBox x:Name="CB" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Margin="617,55,0,0" SelectionChanged="CB_SelectionChanged"/>
+
+    </Grid>
+</Window>

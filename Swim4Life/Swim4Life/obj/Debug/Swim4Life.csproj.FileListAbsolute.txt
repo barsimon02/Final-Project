@@ -1,0 +1,113 @@
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\Database1.mdf
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\Database1_log.ldf
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\Swim4Life.exe.config
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\Swim4Life.exe
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\Swim4Life.pdb
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\MainWindow.g.cs
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\App.g.cs
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life_Content.g.cs
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life_MarkupCompile.cache
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life_MarkupCompile.lref
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\MainWindow.baml
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.g.resources
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.Properties.Resources.resources
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.exe
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.pdb
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Employees.g.cs
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Expense.g.cs
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Pool.g.cs
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Product.g.cs
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Schedule.g.cs
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Student.g.cs
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Teams.g.cs
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\WorkShop.g.cs
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Employees.baml
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Expense.baml
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Pool.baml
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Product.baml
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Schedule.baml
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Student.baml
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Teams.baml
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\WorkShop.baml
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\AddEmp.g.cs
+C:\Users\Administrator\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\AddEmp.baml
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.csprojAssemblyReference.cache
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Employees.g.cs
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Expense.g.cs
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\MainWindow.g.cs
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Pool.g.cs
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Product.g.cs
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Schedule.g.cs
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Student.g.cs
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Teams.g.cs
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\WorkShop.g.cs
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\App.g.cs
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life_Content.g.cs
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life_MarkupCompile.cache
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life_MarkupCompile.lref
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.exe
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.pdb
+E:\S4L\Swim4Life\Swim4Life\bin\Debug\Database1.mdf
+E:\S4L\Swim4Life\Swim4Life\bin\Debug\Database1_log.ldf
+E:\S4L\Swim4Life\Swim4Life\bin\Debug\Swim4Life.exe.config
+E:\S4L\Swim4Life\Swim4Life\bin\Debug\Swim4Life.exe
+E:\S4L\Swim4Life\Swim4Life\bin\Debug\Swim4Life.pdb
+E:\S4L\Swim4Life\Swim4Life\bin\Debug\EntityFramework.dll
+E:\S4L\Swim4Life\Swim4Life\bin\Debug\EntityFramework.SqlServer.dll
+E:\S4L\Swim4Life\Swim4Life\bin\Debug\EntityFramework.xml
+E:\S4L\Swim4Life\Swim4Life\bin\Debug\EntityFramework.SqlServer.xml
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Employees.baml
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Expense.baml
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\MainWindow.baml
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Pool.baml
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Product.baml
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Schedule.baml
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Student.baml
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Teams.baml
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\WorkShop.baml
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.g.resources
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.Properties.Resources.resources
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.csproj.GenerateResource.cache
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.csproj.CoreCompileInputs.cache
+E:\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.csproj.CopyComplete
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.csprojAssemblyReference.cache
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Employees.g.cs
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Expense.g.cs
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\MainWindow.g.cs
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Pool.g.cs
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Product.g.cs
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Schedule.g.cs
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Student.g.cs
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Teams.g.cs
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\WorkShop.g.cs
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\App.g.cs
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life_Content.g.cs
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life_MarkupCompile.cache
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life_MarkupCompile.lref
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.exe
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.pdb
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\Database1.mdf
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\Database1_log.ldf
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\Swim4Life.exe.config
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\Swim4Life.exe
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\Swim4Life.pdb
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\EntityFramework.dll
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\EntityFramework.xml
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Employees.baml
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Expense.baml
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\MainWindow.baml
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Pool.baml
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Product.baml
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Schedule.baml
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Student.baml
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Teams.baml
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\WorkShop.baml
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.g.resources
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.Properties.Resources.resources
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.csproj.GenerateResource.cache
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.csproj.CoreCompileInputs.cache
+C:\Users\sharon cohen\Desktop\S4L\Swim4Life\Swim4Life\obj\Debug\Swim4Life.csproj.CopyComplete

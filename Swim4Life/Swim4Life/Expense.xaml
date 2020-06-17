@@ -1,0 +1,42 @@
+﻿<Window x:Class="Swim4Life.Expense"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Swim4Life"
+        mc:Ignorable="d"
+        Title="Expense" Height="472.4" Width="899" Loaded= "OnLoad2" >
+    <Grid Margin="0,0,-6.2,-20" Background="#FF9EE1FF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="457*"/>
+            <RowDefinition Height="12*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="exp_tbl" HorizontalAlignment="Left" Height="360" VerticalAlignment="Top" Width="485" Margin="10,67,0,0" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding  }" Header=""/>
+                <DataGridTextColumn Binding="{Binding ExpenseDate }" Header="Date"/>
+                <DataGridTextColumn Binding="{Binding ExpenseProductName}" Header="Product Name"/>
+                <DataGridTextColumn Binding="{Binding ExpenseAmount}" Header="Amount"/>
+                <DataGridTextColumn Binding="{Binding ExpenseSum}" Header="Sum"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+        <Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="775,367,0,0" Height="60" Background="White" BorderBrush="Black" FontWeight="Bold" FontFamily="Segoe Print" RenderTransformOrigin="0.562,0.395" Click="Add_Click"/>
+        <Button Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="598,367,0,0" Height="60" Background="White" BorderBrush="Black" FontWeight="Bold" FontFamily="Segoe Print" RenderTransformOrigin="0.22,0.65" Click="Delete_Click"/>
+        <Button Content="Update" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="684,367,0,0" Height="60" BorderBrush="Black" Background="White" FontWeight="Bold" FontFamily="Segoe Print" Click="Update_Click"/>
+        <Label Content="Expense Table"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="142,10,0,0" Height="55" Width="190" BorderBrush="#FF0E0000" OpacityMask="#FF110202" FontWeight="Bold" FontSize="18" FontFamily="Segoe Print"/>
+        <TextBox HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="Date:" VerticalAlignment="Top" Width="81" Margin="598,95,0,0" Background="{x:Null}" BorderBrush="Black" FontWeight="Bold" FontFamily="Segoe Print"/>
+        <TextBox HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="Product:" VerticalAlignment="Top" Width="81" Margin="598,124,0,0" Background="{x:Null}" BorderBrush="Black" FontWeight="Bold" FontFamily="Segoe Print" RenderTransformOrigin="-0.065,-1.046"/>
+        <TextBox HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="Amount:" VerticalAlignment="Top" Width="81" Margin="598,153,0,0" Background="{x:Null}" BorderBrush="Black" FontWeight="Bold" FontFamily="Segoe Print" RenderTransformOrigin="0.865,0.095"/>
+        <ComboBox x:Name="CB" HorizontalAlignment="Left" VerticalAlignment="Top" Width="237" Margin="598,67,0,0" SelectionChanged="CB_SelectionChanged"/>
+        <TextBox x:Name="ExpA" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" Margin="684,153,0,0"/>
+        <TextBox x:Name="ExpD" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" Margin="684,95,0,0"/>
+        <ComboBox x:Name="ProdCombo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="151" Margin="684,126,0,0" Height="22"/>
+
+    </Grid>
+</Window>

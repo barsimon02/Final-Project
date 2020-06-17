@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Employees_Tbl" EntityType="Database1Model1.Employees_Tbl" />
+    <EntitySet Name="Expense_Tbl" EntityType="Database1Model1.Expense_Tbl" />
+    <EntitySet Name="Pool_Tbl" EntityType="Database1Model1.Pool_Tbl" />
+    <EntitySet Name="Product_tbl" EntityType="Database1Model1.Product_tbl" />
+    <EntitySet Name="Schedule_Tbl" EntityType="Database1Model1.Schedule_Tbl" />
+    <EntitySet Name="Students_Tbl" EntityType="Database1Model1.Students_Tbl" />
+    <EntitySet Name="Teams_Tbl" EntityType="Database1Model1.Teams_Tbl" />
+    <EntitySet Name="WorkShop_Tbl" EntityType="Database1Model1.WorkShop_Tbl" />
+    <AssociationSet Name="TeamEmp" Association="Database1Model1.TeamEmp">
+      <End Role="Employees_Tbl" EntitySet="Employees_Tbl" />
+      <End Role="Teams_Tbl" EntitySet="Teams_Tbl" />
+    </AssociationSet>
+    <AssociationSet Name="WorkShopEmp" Association="Database1Model1.WorkShopEmp">
+      <End Role="Employees_Tbl" EntitySet="Employees_Tbl" />
+      <End Role="WorkShop_Tbl" EntitySet="WorkShop_Tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expense_Tbl_Product" Association="Database1Model1.FK_Expense_Tbl_Product">
+      <End Role="Product_tbl" EntitySet="Product_tbl" />
+      <End Role="Expense_Tbl" EntitySet="Expense_Tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_ToPool" Association="Database1Model1.FK_Schedule_ToPool">
+      <End Role="Pool_Tbl" EntitySet="Pool_Tbl" />
+      <End Role="Schedule_Tbl" EntitySet="Schedule_Tbl" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_ToTeam" Association="Database1Model1.FK_Schedule_ToTeam">
+      <End Role="Teams_Tbl" EntitySet="Teams_Tbl" />
+      <End Role="Schedule_Tbl" EntitySet="Schedule_Tbl" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Employees_Tbl">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmpPhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmpAddress" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmpMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmpFunction" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Teams_Tbl" Relationship="Database1Model1.TeamEmp" FromRole="Employees_Tbl" ToRole="Teams_Tbl" />
+    <NavigationProperty Name="WorkShop_Tbl" Relationship="Database1Model1.WorkShopEmp" FromRole="Employees_Tbl" ToRole="WorkShop_Tbl" />
+  </EntityType>
+  <EntityType Name="Expense_Tbl">
+    <Key>
+      <PropertyRef Name="ExpenseId" />
+    </Key>
+    <Property Name="ExpenseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExpenseDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseProductId" Type="Int32" Nullable="false" />
+    <Property Name="ExpenseAmount" Type="Int32" Nullable="false" />
+    <Property Name="ExpenseSum" Type="Int32" Nullable="false" />
+    <Property Name="ExpenseProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Product_tbl" Relationship="Database1Model1.FK_Expense_Tbl_Product" FromRole="Expense_Tbl" ToRole="Product_tbl" />
+  </EntityType>
+  <EntityType Name="Pool_Tbl">
+    <Key>
+      <PropertyRef Name="PoolId" />
+    </Key>
+    <Property Name="PoolId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PoolName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PoolCity" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Schedule_Tbl" Relationship="Database1Model1.FK_Schedule_ToPool" FromRole="Pool_Tbl" ToRole="Schedule_Tbl" />
+  </EntityType>
+  <EntityType Name="Product_tbl">
+    <Key>
+      <PropertyRef Name="ProdId" />
+    </Key>
+    <Property Name="ProdId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProdName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProdPrice" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Expense_Tbl" Relationship="Database1Model1.FK_Expense_Tbl_Product" FromRole="Product_tbl" ToRole="Expense_Tbl" />
+  </EntityType>
+  <EntityType Name="Schedule_Tbl">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="ScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SchedulePoolId" Type="Int32" Nullable="false" />
+    <Property Name="ScheduleTeamId" Type="Int32" Nullable="false" />
+    <Property Name="ScheduleDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Team" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pool" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Pool_Tbl" Relationship="Database1Model1.FK_Schedule_ToPool" FromRole="Schedule_Tbl" ToRole="Pool_Tbl" />
+    <NavigationProperty Name="Teams_Tbl" Relationship="Database1Model1.FK_Schedule_ToTeam" FromRole="Schedule_Tbl" ToRole="Teams_Tbl" />
+  </EntityType>
+  <EntityType Name="Students_Tbl">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StudentPhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StudentAddress" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StudentMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StudentAge" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Teams_Tbl">
+    <Key>
+      <PropertyRef Name="TeamId" />
+    </Key>
+    <Property Name="TeamId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TeamLevel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeamStartDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeamName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TeamEmployee" Type="Int32" />
+    <Property Name="TeamEmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Employees_Tbl" Relationship="Database1Model1.TeamEmp" FromRole="Teams_Tbl" ToRole="Employees_Tbl" />
+    <NavigationProperty Name="Schedule_Tbl" Relationship="Database1Model1.FK_Schedule_ToTeam" FromRole="Teams_Tbl" ToRole="Schedule_Tbl" />
+  </EntityType>
+  <EntityType Name="WorkShop_Tbl">
+    <Key>
+      <PropertyRef Name="WorkShopId" />
+    </Key>
+    <Property Name="WorkShopId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkShopName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WorkShopDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WorkShopEmployee" Type="Int32" Nullable="false" />
+    <Property Name="WorkShopEmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Employees_Tbl" Relationship="Database1Model1.WorkShopEmp" FromRole="WorkShop_Tbl" ToRole="Employees_Tbl" />
+  </EntityType>
+  <Association Name="TeamEmp">
+    <End Type="Database1Model1.Employees_Tbl" Role="Employees_Tbl" Multiplicity="0..1" />
+    <End Type="Database1Model1.Teams_Tbl" Role="Teams_Tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees_Tbl">
+        <PropertyRef Name="EmpId" />
+      </Principal>
+      <Dependent Role="Teams_Tbl">
+        <PropertyRef Name="TeamEmployee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="WorkShopEmp">
+    <End Type="Database1Model1.Employees_Tbl" Role="Employees_Tbl" Multiplicity="1" />
+    <End Type="Database1Model1.WorkShop_Tbl" Role="WorkShop_Tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees_Tbl">
+        <PropertyRef Name="EmpId" />
+      </Principal>
+      <Dependent Role="WorkShop_Tbl">
+        <PropertyRef Name="WorkShopEmployee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expense_Tbl_Product">
+    <End Type="Database1Model1.Product_tbl" Role="Product_tbl" Multiplicity="1" />
+    <End Type="Database1Model1.Expense_Tbl" Role="Expense_Tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_tbl">
+        <PropertyRef Name="ProdId" />
+      </Principal>
+      <Dependent Role="Expense_Tbl">
+        <PropertyRef Name="ExpenseProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_ToPool">
+    <End Type="Database1Model1.Pool_Tbl" Role="Pool_Tbl" Multiplicity="1" />
+    <End Type="Database1Model1.Schedule_Tbl" Role="Schedule_Tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pool_Tbl">
+        <PropertyRef Name="PoolId" />
+      </Principal>
+      <Dependent Role="Schedule_Tbl">
+        <PropertyRef Name="SchedulePoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_ToTeam">
+    <End Type="Database1Model1.Teams_Tbl" Role="Teams_Tbl" Multiplicity="1" />
+    <End Type="Database1Model1.Schedule_Tbl" Role="Schedule_Tbl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teams_Tbl">
+        <PropertyRef Name="TeamId" />
+      </Principal>
+      <Dependent Role="Schedule_Tbl">
+        <PropertyRef Name="ScheduleTeamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

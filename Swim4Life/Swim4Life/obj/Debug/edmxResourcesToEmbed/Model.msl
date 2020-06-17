@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StoreContainer" CdmEntityContainer="dbEntities">
+    <EntitySetMapping Name="Employees_Tbl">
+      <EntityTypeMapping TypeName="Database1Model1.Employees_Tbl">
+        <MappingFragment StoreEntitySet="Employees_Tbl">
+          <ScalarProperty Name="EmpFunction" ColumnName="EmpFunction" />
+          <ScalarProperty Name="EmpMail" ColumnName="EmpMail" />
+          <ScalarProperty Name="EmpAddress" ColumnName="EmpAddress" />
+          <ScalarProperty Name="EmpPhone" ColumnName="EmpPhone" />
+          <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expense_Tbl">
+      <EntityTypeMapping TypeName="Database1Model1.Expense_Tbl">
+        <MappingFragment StoreEntitySet="Expense_Tbl">
+          <ScalarProperty Name="ExpenseProductName" ColumnName="ExpenseProductName" />
+          <ScalarProperty Name="ExpenseSum" ColumnName="ExpenseSum" />
+          <ScalarProperty Name="ExpenseAmount" ColumnName="ExpenseAmount" />
+          <ScalarProperty Name="ExpenseProductId" ColumnName="ExpenseProductId" />
+          <ScalarProperty Name="ExpenseDate" ColumnName="ExpenseDate" />
+          <ScalarProperty Name="ExpenseId" ColumnName="ExpenseId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pool_Tbl">
+      <EntityTypeMapping TypeName="Database1Model1.Pool_Tbl">
+        <MappingFragment StoreEntitySet="Pool_Tbl">
+          <ScalarProperty Name="PoolCity" ColumnName="PoolCity" />
+          <ScalarProperty Name="PoolName" ColumnName="PoolName" />
+          <ScalarProperty Name="PoolId" ColumnName="PoolId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_tbl">
+      <EntityTypeMapping TypeName="Database1Model1.Product_tbl">
+        <MappingFragment StoreEntitySet="Product_tbl">
+          <ScalarProperty Name="ProdPrice" ColumnName="ProdPrice" />
+          <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+          <ScalarProperty Name="ProdId" ColumnName="ProdId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedule_Tbl">
+      <EntityTypeMapping TypeName="Database1Model1.Schedule_Tbl">
+        <MappingFragment StoreEntitySet="Schedule_Tbl">
+          <ScalarProperty Name="Pool" ColumnName="Pool" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+          <ScalarProperty Name="ScheduleTeamId" ColumnName="ScheduleTeamId" />
+          <ScalarProperty Name="SchedulePoolId" ColumnName="SchedulePoolId" />
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students_Tbl">
+      <EntityTypeMapping TypeName="Database1Model1.Students_Tbl">
+        <MappingFragment StoreEntitySet="Students_Tbl">
+          <ScalarProperty Name="StudentAge" ColumnName="StudentAge" />
+          <ScalarProperty Name="StudentMail" ColumnName="StudentMail" />
+          <ScalarProperty Name="StudentAddress" ColumnName="StudentAddress" />
+          <ScalarProperty Name="StudentPhone" ColumnName="StudentPhone" />
+          <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams_Tbl">
+      <EntityTypeMapping TypeName="Database1Model1.Teams_Tbl">
+        <MappingFragment StoreEntitySet="Teams_Tbl">
+          <ScalarProperty Name="TeamEmployeeName" ColumnName="TeamEmployeeName" />
+          <ScalarProperty Name="TeamEmployee" ColumnName="TeamEmployee" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+          <ScalarProperty Name="TeamStartDate" ColumnName="TeamStartDate" />
+          <ScalarProperty Name="TeamLevel" ColumnName="TeamLevel" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkShop_Tbl">
+      <EntityTypeMapping TypeName="Database1Model1.WorkShop_Tbl">
+        <MappingFragment StoreEntitySet="WorkShop_Tbl">
+          <ScalarProperty Name="WorkShopEmployeeName" ColumnName="WorkShopEmployeeName" />
+          <ScalarProperty Name="WorkShopEmployee" ColumnName="WorkShopEmployee" />
+          <ScalarProperty Name="WorkShopDate" ColumnName="WorkShopDate" />
+          <ScalarProperty Name="WorkShopName" ColumnName="WorkShopName" />
+          <ScalarProperty Name="WorkShopId" ColumnName="WorkShopId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
